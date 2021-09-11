@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -11,7 +12,7 @@ func main() {
 	listeningPort := fmt.Sprintf(":%s",port);
 	err := http.ListenAndServe(listeningPort, nil);
 	if err != nil {
-		fmt.Printf("Error happened when starting server: %s", err.Error());
+		log.Fatalf("Error happened when starting server: %s\n", err.Error());
 		return;
 	}
 }
