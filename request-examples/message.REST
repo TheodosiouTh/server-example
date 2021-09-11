@@ -1,0 +1,7 @@
+// LOG Message on Server
+POST http://localhost:8888/message/log HTTP/1.1
+content-type: application/json
+
+{
+    "message": "Hello world"
+}
