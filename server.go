@@ -1,7 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+)
+
+const port = "8888";
 
 func main() {
-	fmt.Printf("Hello world from: %s", "server-example")
+	listeningPort := fmt.Sprintf(":%s",port);
+	err := http.ListenAndServe(listeningPort, nil);
+	if err != nil {
+		fmt.Printf("Error happened when starting server: %s", err.Error());
+		return;
+	}
 }
