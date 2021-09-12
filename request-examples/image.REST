@@ -1,9 +1,9 @@
-POST http://localhost:8888/image/blur
+POST http://localhost:8888/image/blur HTTP/1.1
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="image"; filename="test.jpg"
-Content-Type: image/jpg
+Content-Type: image/jpeg
 
 < ./assets/test.jpg
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
