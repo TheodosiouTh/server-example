@@ -1,8 +1,12 @@
 package main
 
-import "github.com/TheodosiouTh/server-example/api/message"
+import (
+	"github.com/TheodosiouTh/server-example/api/image"
+	"github.com/TheodosiouTh/server-example/api/message"
+)
 
 
 func InitializeRoutes() {
+	image.InitializeRoutes();
 	message.InitializeRoutes();
 }
