@@ -1,6 +1,7 @@
 # Server Example
 
-A simple server for prototyping made using golang.
+A simple server for prototyping made using golang.  
+This is not production ready code, it is just for proof of concept, which means I don't write all the required code (ex. data validation), I just write enough to get the most of what I am trying to implement/learn.
 
 ---
 
@@ -11,6 +12,7 @@ A simple server for prototyping made using golang.
 ## Commands
 
 - Run Server: &nbsp;`make run`
+- Run Test: &nbsp;`make test`
 
 ---
 
@@ -18,3 +20,26 @@ A simple server for prototyping made using golang.
 
 You can find the available routes inside the `request-examples` folder.  
 If you are using VS Code as your editor you can install the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extention and click on the send request button above each Request to execute the request.
+
+## Progress
+
+- Create a server using Golang, with a simple endpoint that logs in the server console  
+  &nbsp; Here I wanted:
+  1. to learn how to create a simple Server in golang without using any external libraries
+  2. to experiment with different file structures
+- Create a image manipulation enpoint (I chose gausian blur of an image)  
+  &nbsp; Here I wanted:
+  1. to learn how to handle file uploading via form data post request
+  2. do simple image processing using go
+- Create a simple sum endpoint
+  &nbsp; Here I wanted:
+  1. to learn how to write unit tests (test utils.Sum)
+  2. to learn how to write integration tests (test the whole endpoint)
+  3. to experiment with recurrsion in golang
+
+## Want to learn
+
+- Create a CI/CD environment
+  &nbsp; I need it to run tests + lint when something in merged to master, or a PR is made with target branch the master branch.
+- gRPC (Microservices)
+  &nbsp; I want to look more into that
