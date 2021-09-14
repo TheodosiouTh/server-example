@@ -12,11 +12,10 @@ func SumIntegerHandler(response http.ResponseWriter, request *http.Request) {
 
 	var numbers []int
 	for _, numberString := range sentNumbers {
-		number, err := strconv.ParseInt(numberString, 10, 64)
+		number, err := strconv.Atoi(numberString)
 		if err != nil {
 			log.Print("Could not decode request body")
-			http.Error(response, err.Error(), http.StatusBadRequest)
-			fmt.Fprintln(response, "No numbers or special characters allowed.")
+			http.Error(response, "No numbers or special characters allowed.", http.StatusBadRequest)
 			return
 		}
 		numbers = append(numbers, int(number))
