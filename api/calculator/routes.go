@@ -5,5 +5,5 @@ import (
 )
 
 func InitializeRoutes() {
-	http.HandleFunc("/calculator/sum-integers", DoubleHandler)
+	http.HandleFunc("/calculator/sum-integers", SumIntegerHandler)
 }
