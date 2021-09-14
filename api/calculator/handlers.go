@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-func DoubleHandler(response http.ResponseWriter, request *http.Request) {
+func SumIntegerHandler(response http.ResponseWriter, request *http.Request) {
 	sentNumbers := request.URL.Query()["numbers"]
 
 	var numbers []int
