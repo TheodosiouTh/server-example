@@ -23,5 +23,5 @@ func SumIntegerHandler(response http.ResponseWriter, request *http.Request) {
 	}
 
 	result := Sum(numbers)
-	fmt.Fprintln(response, result)
+	fmt.Fprint(response, result)
 }
