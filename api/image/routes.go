@@ -4,6 +4,6 @@ import (
 	"net/http"
 )
 
-func InitializeRoutes(){
+func InitializeRoutes() {
 	http.HandleFunc("/image/blur", BlurImageHandler)
 }
