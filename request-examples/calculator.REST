@@ -1,0 +1,6 @@
+GET http://localhost:8888/calculator/sum-integers HTTP/1.1
+content-type: application/json
+
+{
+    "numbers": [1,2,3,4]
+}
