@@ -4,6 +4,6 @@ import (
 	"net/http"
 )
 
-func InitializeRoutes(){
-	http.HandleFunc("/calculator/sum", DoubleHandler)
+func InitializeRoutes() {
+	http.HandleFunc("/calculator/sum-integers", DoubleHandler)
 }
