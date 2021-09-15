@@ -20,7 +20,7 @@ jobs:
     needs: linting
     steps:
       - uses: actions/checkout@v2
-        - name: Build binary
+      - name: Build binary
         run: make build
   tests:
     runs-on: ubuntu-latest
