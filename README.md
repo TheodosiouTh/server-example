@@ -27,19 +27,23 @@ If you are using VS Code as your editor you can install the [REST Client](https:
   &nbsp; Here I wanted:
   1. to learn how to create a simple Server in golang without using any external libraries
   2. to experiment with different file structures
+  3. to learn how to use make files
 - Create a image manipulation enpoint (I chose gausian blur of an image)  
   &nbsp; Here I wanted:
   1. to learn how to handle file uploading via form data post request
   2. do simple image processing using go
+  3. use goroutines and channels to run intensive code on separate thread
 - Create a simple sum endpoint
   &nbsp; Here I wanted:
   1. to learn how to write unit tests (test utils.Sum)
   2. to learn how to write integration tests (test the whole endpoint)
   3. to experiment with recurrsion in golang
+- Create a CI/CD environment
+  &nbsp; Here I wanted:
+  1. to learn how linting works in go
+  2. to learn how to write a worklow file that checks linting, ability to build and that the tests pass
 
 ## Want to learn
 
-- Create a CI/CD environment
-  &nbsp; I need it to run tests + lint when something in merged to master, or a PR is made with target branch the master branch.
 - gRPC (Microservices)
   &nbsp; I want to look more into that
