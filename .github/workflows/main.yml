@@ -20,8 +20,6 @@ jobs:
     needs: linting
     steps:
       - uses: actions/checkout@v2
-        with:
-          version: 'latest'
         - name: Build binary
         run: make build
   tests:
@@ -29,7 +27,5 @@ jobs:
     needs: linting
     steps:
       - uses: actions/checkout@v2
-        with:
-          version: 'latest'
       - name: Run tests
         run: make test
