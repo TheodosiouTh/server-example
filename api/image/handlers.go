@@ -44,10 +44,14 @@ func BlurImageHandler(response http.ResponseWriter, request *http.Request) {
 
 	imageChannel := make(chan []byte)
 	go BlurImage(image, standardDeviation, imageChannel)
-	bluredImageBurffer := <-imageChannel
+	result := <-imageChannel
+	if string(result) == "error" {
+		http.Error(response, err.Error(), http.StatusInternalServerError)
+		return
+	}
 
 	response.Header().Set("Content-Type", "image/png")
-	_, err = response.Write(bluredImageBurffer)
+	_, err = response.Write(result)
 	if err != nil {
 		log.Print("Could not send blured image to client")
 		http.Error(response, err.Error(), http.StatusInternalServerError)
