@@ -2,6 +2,7 @@ package message
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 )
@@ -20,5 +21,5 @@ func LogMessage(response http.ResponseWriter, request *http.Request) {
 	}
 
 	log.Print(body.Message)
-	response.Write([]byte("Message was logged successfully!"))
+	fmt.Fprint(response, "Message was logged successfully!")
 }
