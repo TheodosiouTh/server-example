@@ -5,6 +5,7 @@ import (
 	"image"
 	"image/color"
 	"image/jpeg"
+	"log"
 	"math"
 )
 
@@ -32,7 +33,11 @@ func BlurImage(imageToBlur image.Image, standardDeviation float64, out chan []by
 	}
 
 	buffer := new(bytes.Buffer)
-	jpeg.Encode(buffer, imageResult, nil)
+	err := jpeg.Encode(buffer, imageResult, nil)
+	if err != nil {
+		log.Printf("Could not encode blured image to buffer, got error: %s", err.Error())
+		out <- []byte("error")
+	}
 	out <- buffer.Bytes()
 }
 

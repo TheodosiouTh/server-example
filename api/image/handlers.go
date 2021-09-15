@@ -8,7 +8,13 @@ import (
 )
 
 func BlurImageHandler(response http.ResponseWriter, request *http.Request) {
-	request.ParseMultipartForm(5 * 1024 * 1024)
+	err := request.ParseMultipartForm(5 * 1024 * 1024)
+	if err != nil {
+		log.Print("Could not parse request form data")
+		http.Error(response, err.Error(), http.StatusBadRequest)
+		return
+	}
+
 	imageData, _, err := request.FormFile("image")
 	if err != nil {
 		log.Print("Could not parse image from request form data")
@@ -38,8 +44,17 @@ func BlurImageHandler(response http.ResponseWriter, request *http.Request) {
 
 	imageChannel := make(chan []byte)
 	go BlurImage(image, standardDeviation, imageChannel)
-	bluredImageBurffer := <-imageChannel
+	result := <-imageChannel
+	if string(result) == "error" {
+		http.Error(response, err.Error(), http.StatusInternalServerError)
+		return
+	}
 
 	response.Header().Set("Content-Type", "image/png")
-	response.Write(bluredImageBurffer)
+	_, err = response.Write(result)
+	if err != nil {
+		log.Print("Could not send blured image to client")
+		http.Error(response, err.Error(), http.StatusInternalServerError)
+		return
+	}
 }

@@ -1,0 +1,31 @@
+name: Continious Integration Workflow
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v2
+        with:
+          version: 'latest'
+  build:
+    runs-on: ubuntu-latest
+    needs: linting
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build binary
+        run: make build
+  tests:
+    runs-on: ubuntu-latest
+    needs: linting
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run tests
+        run: make test
