@@ -7,7 +7,7 @@ This is not production ready code, it is just for proof of concept, which means 
 
 ## Dependences
 
-- `go 1.17+`
+- `go 1.16+`
 
 ## Commands
 
