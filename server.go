@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-const port = "8888"
+const port = "8080"
 
 func main() {
 	listeningPort := fmt.Sprintf(":%s", port)
