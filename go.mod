@@ -1,3 +1,3 @@
-module github.com/TheodosiouTh/server-example
+module server-example
 
 go 1.16
