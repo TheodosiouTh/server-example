@@ -51,7 +51,7 @@ This is not production ready code, it is just for proof of concept, which means 
 make stop-image
 ```
 
-### Stop the Image
+### Cleanup the Image
 
 ```
 make remove-image
