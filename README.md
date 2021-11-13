@@ -16,10 +16,62 @@ This is not production ready code, it is just for proof of concept, which means 
 
 ---
 
+## Running the project inside a docker container
+
+### Prerequisites
+
+- Make sure you have docker installed for your operating system. [Download Link](https://docs.docker.com/get-docker/)
+- make sure that you are not running the server on your local machine (aka. have run the `go run .`)
+
+### Steps to run
+
+1. Open Terminal
+
+2. Navigate to the project directory
+
+3. Build the docker image (with tag `server-example`)
+
+   ```console
+   docker build . -t server-example
+   ```
+
+4. Check that the image was craeted  
+   To check that the docker image was created run the command
+   ```console
+    docker images
+   ```
+   This should output something like this
+   ```console
+    REPOSITORY       TAG       IMAGE ID       CREATED         SIZE
+    server-example   latest      ...          1 minute ago   323MB
+   ```
+   If you do not see the seccond line go back to step 3.
+   Make sure that you type the command correclty, or even better copy it and paste it in your terminal.
+5. Run the docker image
+   We need to run the image while making sure to bound a port so that we can access our services
+   ```console
+    docker run -p 8080:8080 --name  server-example -d server-example
+   ```
+6. Make sure your image is running
+   To check that the docker image is running run the command
+   ```console
+     docker ps
+   ```
+   This should output something like this
+   ```console
+    CONTAINER ID   IMAGE            COMMAND     CREATED          STATUS          PORTS                    NAMES
+        ...        server-example   "/server"   26 seconds ago   Up 25 seconds   0.0.0.0:8080->8080/tcp   server-example
+   ```
+   If you do not see the seccond line go back to step 5.
+   Make sure that you type the command correclty, or even better copy it and paste it in your terminal.
+7. Test your app.  
+   To test the app you can use the routes, as described in the `Routes`.
+
 ## Routes
 
 You can find the available routes inside the `request-examples` folder.  
 If you are using VS Code as your editor you can install the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extention and click on the send request button above each Request to execute the request.
+If you are not using VS Code you can use [Postman](https://www.postman.com/)
 
 ## Progress
 
