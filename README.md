@@ -1,7 +1,7 @@
 # Server Example
 
 A simple server for prototyping made using golang.  
-This is not production ready code, it is just for proof of concept, which means I don't write all the required code (ex. data validation), I just write enough to get the most of what I am trying to implement/learn.
+This is not production-ready code, it is just for proof of concept, which means I don't write all the required code (ex. data validation), I just write enough to get the most of what I am trying to implement/learn.
 
 ---
 
@@ -21,7 +21,7 @@ This is not production ready code, it is just for proof of concept, which means 
 ## Prerequisites
 
 - Make sure you have docker installed for your operating system. [Download Link](https://docs.docker.com/get-docker/)
-- make sure that you are not running the server on your local machine (aka. have run the `go run .`)
+- Make sure that you are not running the server on your local machine (aka. have run the `go run .`)
 - If you are using linux make sure you have the make command installed.  
   For Ubuntu you can use these commands:
 
@@ -51,7 +51,7 @@ This is not production ready code, it is just for proof of concept, which means 
 make stop-image
 ```
 
-### Cleanup the Image
+### Clean up the Image
 
 ```console
 make remove-image
@@ -69,7 +69,7 @@ make remove-image
    docker build . -t server-example
    ```
 
-4. Check that the image was craeted  
+4. Check that the image was created  
    To check that the docker image was created run the command
    ```console
     docker images
@@ -79,8 +79,8 @@ make remove-image
     REPOSITORY       TAG       IMAGE ID       CREATED         SIZE
     server-example   latest      ...          1 minute ago   323MB
    ```
-   If you do not see the seccond line go back to step 3.
-   Make sure that you type the command correclty, or even better copy it and paste it in your terminal.
+   If you do not see the second line go back to step 3.
+   Make sure that you type the command correctly, or even better copy it and paste it into your terminal.
 5. Run the docker image
    We need to run the image while making sure to bound a port so that we can access our services
    ```console
@@ -96,8 +96,8 @@ make remove-image
     CONTAINER ID   IMAGE            COMMAND     CREATED          STATUS          PORTS                    NAMES
         ...        server-example   "/server"   26 seconds ago   Up 25 seconds   0.0.0.0:8080->8080/tcp   server-example
    ```
-   If you do not see the seccond line go back to step 5.
-   Make sure that you type the command correclty, or even better copy it and paste it in your terminal.
+   If you do not see the second line go back to step 5.
+   Make sure that you type the command correctly, or even better copy it and paste it into your terminal.
 7. Test your app.  
    To test the app you can use the routes, as described in the `Routes`.
 
@@ -145,9 +145,9 @@ make remove-image
     CONTAINER ID   IMAGE            COMMAND     CREATED          STATUS          PORTS                    NAMES
    ```
 
-   Or if you have other images running you should no see the image `server-example` in the list
+   Or if you have other images running you should not see the image `server-example` in the list
 
-## Cleanup the Image
+## Clean up the Image
 
 1. Open Terminal
 2. Navigate to the project directory
@@ -199,7 +199,7 @@ make remove-image
 ## Routes
 
 You can find the available routes inside the `request-examples` folder.  
-If you are using VS Code as your editor you can install the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extention and click on the send request button above each Request to execute the request.
+If you are using VS Code as your editor you can install the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension and click on the send request button above each Request to execute the request.
 If you are not using VS Code you can use [Postman](https://www.postman.com/)
 
 ## Progress
@@ -209,20 +209,20 @@ If you are not using VS Code you can use [Postman](https://www.postman.com/)
   1. to learn how to create a simple Server in golang without using any external libraries
   2. to experiment with different file structures
   3. to learn how to use make files
-- Create a image manipulation enpoint (I chose gausian blur of an image)  
+- Create an image manipulation endpoint (I chose Gaussian blur of an image)  
   &nbsp; Here I wanted:
-  1. to learn how to handle file uploading via form data post request
+  1. to learn how to handle file uploading via form-data post request
   2. do simple image processing using go
-  3. use goroutines and channels to run intensive code on separate thread
+  3. use goroutines and channels to run intensive code on a separate thread
 - Create a simple sum endpoint  
   &nbsp; Here I wanted:
   1. to learn how to write unit tests (test utils.Sum)
   2. to learn how to write integration tests (test the whole endpoint)
-  3. to experiment with recurrsion in golang
+  3. to experiment with recursion in golang
 - Create a CI/CD environment  
   &nbsp; Here I wanted:
   1. to learn how linting works in go
-  2. to learn how to write a worklow file that checks linting, ability to build and that the tests pass
+  2. to learn how to write a workflow file that checks linting, ability to build and that the tests pass
 - Run the app inside a Docker container  
   &nbsp; Here I wanted:
   1. to learn what is docker
