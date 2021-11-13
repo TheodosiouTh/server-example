@@ -233,6 +233,5 @@ If you are not using VS Code you can use [Postman](https://www.postman.com/)
 ## Want to learn
 
 - Kubernetes
-  &nbsp; I want to look more into that
 - gRPC (Microservices)
   &nbsp; I want to look more into that
