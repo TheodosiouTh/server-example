@@ -36,24 +36,24 @@ This is not production ready code, it is just for proof of concept, which means 
 ### Run the app in a container
 
 1.  Build the image:
-    ```
+    ```console
     make build-image
     ```
 2.  Run the image
 
-    ```
+    ```console
     make run-image
     ```
 
 ### Stop the Image
 
-```
+```console
 make stop-image
 ```
 
 ### Cleanup the Image
 
-```
+```console
 make remove-image
 ```
 
