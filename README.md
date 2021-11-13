@@ -166,7 +166,7 @@ make remove-image
 
    Or if you have other images running you should not see the image `server-example` in the list
 
-4) Remove the image  
+4. Remove the image  
    To remove the docker image run:
 
    ```console
@@ -179,7 +179,7 @@ make remove-image
     server-example
    ```
 
-5) Validate that the image was deleted running
+5. Validate that the image was deleted running
    To check that the image was deleted running run the command
 
    ```console
