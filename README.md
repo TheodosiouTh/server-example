@@ -26,9 +26,7 @@ This is not production ready code, it is just for proof of concept, which means 
 ### Steps to run
 
 1. Open Terminal
-
 2. Navigate to the project directory
-
 3. Build the docker image (with tag `server-example`)
 
    ```console
@@ -66,6 +64,8 @@ This is not production ready code, it is just for proof of concept, which means 
    Make sure that you type the command correclty, or even better copy it and paste it in your terminal.
 7. Test your app.  
    To test the app you can use the routes, as described in the `Routes`.
+
+---
 
 ## Routes
 
