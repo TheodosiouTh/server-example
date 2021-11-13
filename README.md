@@ -18,10 +18,46 @@ This is not production ready code, it is just for proof of concept, which means 
 
 ## Running the project inside a docker container
 
-### Prerequisites
+## Prerequisites
 
 - Make sure you have docker installed for your operating system. [Download Link](https://docs.docker.com/get-docker/)
 - make sure that you are not running the server on your local machine (aka. have run the `go run .`)
+- If you are using linux make sure you have the make command installed.  
+  For Ubuntu you can use these commands:
+
+  ```
+   sudo apt update
+
+   sudo apt install make
+  ```
+
+## Linux
+
+### Run the app in a container
+
+1.  Build the image:
+    ```
+    make build-image
+    ```
+2.  Run the image
+
+    ```
+    make run-image
+    ```
+
+### Stop the Image
+
+```
+make stop-image
+```
+
+### Stop the Image
+
+```
+make remove-image
+```
+
+## Windows
 
 ### Run the app in a container
 
