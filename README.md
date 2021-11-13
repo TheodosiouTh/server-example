@@ -65,6 +65,99 @@ This is not production ready code, it is just for proof of concept, which means 
 7. Test your app.  
    To test the app you can use the routes, as described in the `Routes`.
 
+### Stop the Image
+
+1. Open Terminal
+2. Navigate to the project directory
+3. Check if the server image is running
+   To check if the server image is running run the command
+
+   ```console
+     docker ps
+   ```
+
+   If the image is running you should see something like this
+
+   ```console
+    CONTAINER ID   IMAGE            COMMAND     CREATED          STATUS          PORTS                    NAMES
+        ...        server-example   "/server"   26 seconds ago   Up 25 seconds   0.0.0.0:8080->8080/tcp   server-example
+   ```
+
+4. Stop the server  
+   To stop the server run:
+
+   ```console
+     docker stop server-example
+   ```
+
+   The output of this command should be the name of the image
+
+   ```console
+    server-example
+   ```
+
+5. Validate that the server image stoped running
+   To check that the server image has stopped running run the command
+
+   ```console
+     docker ps
+   ```
+
+   You should get an output like so
+
+   ```console
+    CONTAINER ID   IMAGE            COMMAND     CREATED          STATUS          PORTS                    NAMES
+   ```
+
+   Or if you have other images running you should no see the image `server-example` in the list
+
+## Cleanup the Image
+
+1. Open Terminal
+2. Navigate to the project directory
+3. Check that the server image is running
+   To check that the server image is not running run the command
+
+   ```console
+     docker ps
+   ```
+
+   You should get an output like so
+
+   ```console
+    CONTAINER ID   IMAGE            COMMAND     CREATED          STATUS          PORTS                    NAMES
+   ```
+
+   Or if you have other images running you should not see the image `server-example` in the list
+
+4) Remove the image  
+   To remove the docker image run:
+
+   ```console
+    docker rm server-example
+   ```
+
+   The output of this command should be the name of the image
+
+   ```console
+    server-example
+   ```
+
+5) Validate that the image was deleted running
+   To check that the image was deleted running run the command
+
+   ```console
+     docker ps -a
+   ```
+
+   You should get an output like so
+
+   ```console
+    CONTAINER ID   IMAGE            COMMAND     CREATED          STATUS          PORTS                    NAMES
+   ```
+
+   Or if you have built other images previously you should not see the image `server-example` in the list
+
 ---
 
 ## Routes
