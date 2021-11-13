@@ -214,17 +214,25 @@ If you are not using VS Code you can use [Postman](https://www.postman.com/)
   1. to learn how to handle file uploading via form data post request
   2. do simple image processing using go
   3. use goroutines and channels to run intensive code on separate thread
-- Create a simple sum endpoint
+- Create a simple sum endpoint  
   &nbsp; Here I wanted:
   1. to learn how to write unit tests (test utils.Sum)
   2. to learn how to write integration tests (test the whole endpoint)
   3. to experiment with recurrsion in golang
-- Create a CI/CD environment
+- Create a CI/CD environment  
   &nbsp; Here I wanted:
   1. to learn how linting works in go
   2. to learn how to write a worklow file that checks linting, ability to build and that the tests pass
+- Run the app inside a Docker container  
+  &nbsp; Here I wanted:
+  1. to learn what is docker
+  2. to learn how docker works
+  3. to learn how to open a container
+  4. to learn the basics of deploying an application inside a container
 
 ## Want to learn
 
+- Kubernetes
+  &nbsp; I want to look more into that
 - gRPC (Microservices)
   &nbsp; I want to look more into that
