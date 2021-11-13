@@ -23,7 +23,7 @@ This is not production ready code, it is just for proof of concept, which means 
 - Make sure you have docker installed for your operating system. [Download Link](https://docs.docker.com/get-docker/)
 - make sure that you are not running the server on your local machine (aka. have run the `go run .`)
 
-### Steps to run
+### Run the app in a container
 
 1. Open Terminal
 2. Navigate to the project directory
