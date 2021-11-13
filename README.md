@@ -25,7 +25,7 @@ This is not production ready code, it is just for proof of concept, which means 
 - If you are using linux make sure you have the make command installed.  
   For Ubuntu you can use these commands:
 
-  ```
+  ```console
    sudo apt update
 
    sudo apt install make
