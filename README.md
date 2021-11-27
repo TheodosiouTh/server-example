@@ -230,8 +230,3 @@ If you are not using VS Code you can use [Postman](https://www.postman.com/)
   3. to learn how to open a container
   4. to learn the basics of deploying an application inside a container
 
-## Want to learn
-
-- Kubernetes
-- gRPC (Microservices)
-  &nbsp; I want to look more into that
